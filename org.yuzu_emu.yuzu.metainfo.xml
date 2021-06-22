@@ -30,6 +30,7 @@
     <screenshot>https://raw.githubusercontent.com/yuzu-emu/yuzu-emu.github.io/master/images/screenshots/037-The%20Legend%20of%20Zelda%20Links%20Awakening.png</screenshot>
   </screenshots>
   <releases>
+    <release version="mainline-0-665" date="2021-06-22"/>
     <release version="mainline-0-662" date="2021-06-19"/>
     <release version="mainline-0-657" date="2021-06-13"/>
     <release version="mainline-0-656" date="2021-06-13"/>
