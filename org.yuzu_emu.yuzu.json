@@ -183,8 +183,8 @@
                 "-DYUZU_ENABLE_COMPATIBILITY_REPORTING=ON",
                 "-DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON",
                 "-DYUZU_USE_QT_WEB_ENGINE=ON",
-                "-DDISPLAY_VERSION=701",
-                "-DBUILD_TAG=mainline-701",
+                "-DDISPLAY_VERSION=702",
+                "-DBUILD_TAG=mainline-702",
                 "-DBUILD_REPOSITORY=yuzu-emu/yuzu-mainline"
             ],
             "build-options": {
@@ -210,8 +210,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-701",
-                    "commit": "fb9b5898b38c003edb4a5a0d60d84c60f9e68061",
+                    "tag": "mainline-0-702",
+                    "commit": "09f9788d8434f842739c065a194a1b91573a8b33",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
