@@ -143,8 +143,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nlohmann/json/archive/v3.9.1.tar.gz",
-                    "sha256": "4cf0df69731494668bdd6460ed8cb269b68de9c19ad8c27abc24cd72605b2d5b",
+                    "url": "https://github.com/nlohmann/json/archive/v3.10.0.tar.gz",
+                    "sha256": "eb8b07806efa5f95b349766ccc7a8ec2348f3b2ee9975ad879259a371aea8084",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 141453,
@@ -183,8 +183,8 @@
                 "-DYUZU_ENABLE_COMPATIBILITY_REPORTING=ON",
                 "-DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON",
                 "-DYUZU_USE_QT_WEB_ENGINE=ON",
-                "-DDISPLAY_VERSION=719",
-                "-DBUILD_TAG=mainline-719",
+                "-DDISPLAY_VERSION=720",
+                "-DBUILD_TAG=mainline-720",
                 "-DBUILD_REPOSITORY=yuzu-emu/yuzu-mainline"
             ],
             "build-options": {
@@ -210,8 +210,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-719",
-                    "commit": "8e2f9381c2eee084749593877f66e665fc77c4fc",
+                    "tag": "mainline-0-720",
+                    "commit": "38d6bd5812be188b1d95faece6fd01b3b1e2d563",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
