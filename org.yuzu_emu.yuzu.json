@@ -15,7 +15,7 @@
         "--share=network",
         "--share=ipc",
         "--filesystem=xdg-config/yuzu:create",
-        "--filesystem=xdg-data/yuzu:create",
+        "--filesystem=xdg-data/yuzu:create"
     ],
     "cleanup-commands": [
         "/app/cleanup-BaseApp.sh"
