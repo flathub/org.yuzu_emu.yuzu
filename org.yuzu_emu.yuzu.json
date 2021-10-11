@@ -14,8 +14,6 @@
         "--socket=pulseaudio",
         "--share=network",
         "--share=ipc",
-        "--filesystem=xdg-config/yuzu:create",
-        "--filesystem=xdg-data/yuzu:create",
         "--filesystem=host:ro"
     ],
     "cleanup-commands": [
