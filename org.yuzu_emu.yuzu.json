@@ -5,6 +5,21 @@
     "sdk": "org.kde.Sdk",
     "base": "io.qt.qtwebengine.BaseApp",
     "base-version": "5.15-21.08",
+    "add-extensions": {
+        "org.freedesktop.Platform.ffmpeg-full": {
+            "directory": "lib/ffmpeg",
+            "version": "21.08",
+            "add-ld-path": ".",
+            "no-autodownload": false
+        },
+        "org.freedesktop.Platform.VAAPI.Intel": {
+            "directory": "lib",
+            "version": "21.08",
+            "add-ld-path": ".",
+            "download-if": "have-intel-gpu",
+            "no-autodownload": false
+        }
+    },
     "command": "yuzu",
     "rename-desktop-file": "yuzu.desktop",
     "rename-icon": "yuzu",
