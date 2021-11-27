@@ -1,10 +1,25 @@
 {
     "app-id": "org.yuzu_emu.yuzu",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15",
+    "runtime-version": "5.15-21.08",
     "sdk": "org.kde.Sdk",
     "base": "io.qt.qtwebengine.BaseApp",
-    "base-version": "5.15",
+    "base-version": "5.15-21.08",
+    "add-extensions": {
+        "org.freedesktop.Platform.ffmpeg-full": {
+            "directory": "lib/ffmpeg",
+            "version": "21.08",
+            "add-ld-path": ".",
+            "no-autodownload": false
+        },
+        "org.freedesktop.Platform.VAAPI.Intel": {
+            "directory": "lib",
+            "version": "21.08",
+            "add-ld-path": ".",
+            "download-if": "have-intel-gpu",
+            "no-autodownload": false
+        }
+    },
     "command": "yuzu",
     "rename-desktop-file": "yuzu.desktop",
     "rename-icon": "yuzu",
@@ -14,8 +29,6 @@
         "--socket=pulseaudio",
         "--share=network",
         "--share=ipc",
-        "--filesystem=xdg-config/yuzu:create",
-        "--filesystem=xdg-data/yuzu:create"
     ],
     "cleanup-commands": [
         "/app/cleanup-BaseApp.sh"
@@ -101,8 +114,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KhronosGroup/glslang/archive/11.6.0.tar.gz",
-                    "sha256": "99ecd3a0c2c2219293d76723846f762a9f3e7dd0dc2a4f346d0fc3a05a0ce000",
+                    "url": "https://github.com/KhronosGroup/glslang/archive/11.7.1.tar.gz",
+                    "sha256": "ab2e2ddc507bb418b9227cbe6f443eb06e89e2387944f42026d82c0b4ef79b0a",
                     "x-checker-data": {
                         "type": "anitya",
                         "stable-only": true,
@@ -142,8 +155,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nlohmann/json/archive/v3.10.2.tar.gz",
-                    "sha256": "081ed0f9f89805c2d96335c3acfa993b39a0a5b4b4cef7edb68dd2210a13458c",
+                    "url": "https://github.com/nlohmann/json/archive/v3.10.4.tar.gz",
+                    "sha256": "1155fd1a83049767360e9a120c43c578145db3204d2b309eba49fbbedd0f4ed3",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 141453,
@@ -162,12 +175,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/boost_1_76_0.tar.bz2",
-                    "sha256": "f0397ba6e982c4450f27bf32a2a83292aba035b827a5623a14636ea583318c41",
+                    "url": "https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/boost_1_77_0.tar.bz2",
+                    "sha256": "fc9f85fc030e233142908241af7a846e60630aa7388de9a5fafb1f3a26840854",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 6845,
-                        "url-template": "https://boostorg.jfrog.io/artifactory/main/release/$version/source/boost_1_76_0.tar.bz2"
+                        "url-template": "https://boostorg.jfrog.io/artifactory/main/release/$version/source/boost_1_77_0.tar.bz2"
                     }
                 }
             ]
@@ -182,8 +195,8 @@
                 "-DYUZU_ENABLE_COMPATIBILITY_REPORTING=ON",
                 "-DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON",
                 "-DYUZU_USE_QT_WEB_ENGINE=ON",
-                "-DDISPLAY_VERSION=762",
-                "-DBUILD_TAG=mainline-762",
+                "-DDISPLAY_VERSION=827",
+                "-DBUILD_TAG=mainline-827",
                 "-DBUILD_REPOSITORY=yuzu-emu/yuzu-mainline"
             ],
             "build-options": {
@@ -209,8 +222,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-762",
-                    "commit": "e4f21ad804ef6d8053a38c8f95ecb69311674a40",
+                    "tag": "mainline-0-827",
+                    "commit": "e56915b0056e0431e60ac65e7a65233de9ef28ca",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
