@@ -129,7 +129,8 @@
             "name": "catch2",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release"
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DCATCH_BUILD_TESTING=OFF"
             ],
             "builddir": true,
             "sources": [
@@ -150,7 +151,8 @@
             "name": "nlohmann-json",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-                "-DCMAKE_BUILD_TYPE=Release"
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DJSON_BuildTests=OFF"
             ],
             "sources": [
                 {
