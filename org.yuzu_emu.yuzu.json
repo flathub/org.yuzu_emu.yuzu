@@ -28,7 +28,7 @@
         "--socket=fallback-x11",
         "--socket=pulseaudio",
         "--share=network",
-        "--share=ipc",
+        "--share=ipc"
     ],
     "cleanup-commands": [
         "/app/cleanup-BaseApp.sh"
