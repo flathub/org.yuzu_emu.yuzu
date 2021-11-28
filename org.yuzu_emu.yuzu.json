@@ -213,6 +213,7 @@
                 "/share/pixmaps"
             ],
             "post-install": [
+                "mkdir -p /app/lib/ffmpeg",
                 "install -Dm644 ../org.yuzu_emu.yuzu.metainfo.xml /app/share/appdata/org.yuzu_emu.yuzu.metainfo.xml",
                 "desktop-file-install --dir=/app/share/applications ../dist/yuzu.desktop",
                 "desktop-file-edit --set-key StartupWMClass --set-value yuzu /app/share/applications/yuzu.desktop",
