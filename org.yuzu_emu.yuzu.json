@@ -11,13 +11,6 @@
             "version": "21.08",
             "add-ld-path": ".",
             "no-autodownload": false
-        },
-        "org.freedesktop.Platform.VAAPI.Intel": {
-            "directory": "lib",
-            "version": "21.08",
-            "add-ld-path": ".",
-            "download-if": "have-intel-gpu",
-            "no-autodownload": false
         }
     },
     "command": "yuzu",
