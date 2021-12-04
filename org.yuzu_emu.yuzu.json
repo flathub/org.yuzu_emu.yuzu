@@ -5,14 +5,6 @@
     "sdk": "org.kde.Sdk",
     "base": "io.qt.qtwebengine.BaseApp",
     "base-version": "5.15-21.08",
-    "add-extensions": {
-        "org.freedesktop.Platform.ffmpeg-full": {
-            "directory": "lib/ffmpeg",
-            "version": "21.08",
-            "add-ld-path": ".",
-            "no-autodownload": false
-        }
-    },
     "command": "yuzu",
     "rename-desktop-file": "yuzu.desktop",
     "rename-icon": "yuzu",
@@ -181,6 +173,24 @@
             ]
         },
         {
+            "name": "nv-codec-headers",
+            "make-install-args": ["PREFIX=/app"],
+            "no-autogen": true,
+            "cleanup": ["*"],
+            "sources": [
+                {
+                "type": "git",
+                "url": "https://git.videolan.org/git/ffmpeg/nv-codec-headers.git",
+                "tag": "n11.1.5.0",
+                "commit": "b641a195edbe3ac9788e681e22c2e2fad8aacddb",
+                "x-checker-data": {
+                    "type": "git",
+                    "tag-pattern": "^n([\\d.]+)$"
+                }
+                }
+            ]
+        },
+        {
             "name": "yuzu",
             "buildsystem": "cmake-ninja",
             "builddir": true,
@@ -190,6 +200,7 @@
                 "-DYUZU_ENABLE_COMPATIBILITY_REPORTING=ON",
                 "-DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON",
                 "-DYUZU_USE_QT_WEB_ENGINE=ON",
+                "-DYUZU_USE_BUNDLED_FFMPEG=ON",
                 "-DDISPLAY_VERSION=846",
                 "-DBUILD_TAG=mainline-846",
                 "-DBUILD_REPOSITORY=yuzu-emu/yuzu-mainline"
@@ -206,7 +217,6 @@
                 "/share/pixmaps"
             ],
             "post-install": [
-                "mkdir -p /app/lib/ffmpeg",
                 "install -Dm644 ../org.yuzu_emu.yuzu.metainfo.xml /app/share/appdata/org.yuzu_emu.yuzu.metainfo.xml",
                 "desktop-file-install --dir=/app/share/applications ../dist/yuzu.desktop",
                 "desktop-file-edit --set-key StartupWMClass --set-value yuzu /app/share/applications/yuzu.desktop",
