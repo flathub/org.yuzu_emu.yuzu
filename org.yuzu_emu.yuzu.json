@@ -5,7 +5,7 @@
     "sdk": "org.kde.Sdk",
     "base": "io.qt.qtwebengine.BaseApp",
     "base-version": "5.15-21.08",
-    "command": "yuzu",
+    "command": "yuzu-launcher",
     "rename-desktop-file": "yuzu.desktop",
     "rename-icon": "yuzu",
     "finish-args": [
@@ -217,9 +217,10 @@
                 "/share/pixmaps"
             ],
             "post-install": [
+                "install -Dm755 ../yuzu-launcher.sh /app/bin/yuzu-launcher",
                 "install -Dm644 ../org.yuzu_emu.yuzu.metainfo.xml /app/share/appdata/org.yuzu_emu.yuzu.metainfo.xml",
                 "desktop-file-install --dir=/app/share/applications ../dist/yuzu.desktop",
-                "desktop-file-edit --set-key StartupWMClass --set-value yuzu /app/share/applications/yuzu.desktop",
+                "desktop-file-edit --set-key StartupWMClass --set-value yuzu --set-key Exec --set-value yuzu-launcher /app/share/applications/yuzu.desktop",
                 "install -Dm644 ../dist/yuzu.svg /app/share/icons/hicolor/scalable/apps/yuzu.svg",
                 "mv /app/share/mime/packages/yuzu.xml /app/share/mime/packages/org.yuzu_emu.yuzu.xml",
                 "sed 's/yuzu/org.yuzu_emu.yuzu/g' -i /app/share/mime/packages/org.yuzu_emu.yuzu.xml"
@@ -239,6 +240,10 @@
                 {
                     "type": "file",
                     "path": "org.yuzu_emu.yuzu.metainfo.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "yuzu-launcher.sh"
                 },
                 {
                     "type": "file",
