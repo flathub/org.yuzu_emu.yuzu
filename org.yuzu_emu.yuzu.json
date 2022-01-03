@@ -80,8 +80,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/fmtlib/fmt/releases/download/8.0.1/fmt-8.0.1.zip",
-                    "sha256": "a627a56eab9554fc1e5dd9a623d0768583b3a383ff70a4312ba68f94c9d415bf",
+                    "url": "https://github.com/fmtlib/fmt/releases/download/8.1.0/fmt-8.1.0.zip",
+                    "sha256": "d8e9f093b2241c3a9fc3895e23231ef9de00c762cfa0a9c65e4748755bc352ae",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 11526,
