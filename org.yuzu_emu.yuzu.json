@@ -80,8 +80,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/fmtlib/fmt/releases/download/8.0.1/fmt-8.0.1.zip",
-                    "sha256": "a627a56eab9554fc1e5dd9a623d0768583b3a383ff70a4312ba68f94c9d415bf",
+                    "url": "https://github.com/fmtlib/fmt/releases/download/8.1.0/fmt-8.1.0.zip",
+                    "sha256": "d8e9f093b2241c3a9fc3895e23231ef9de00c762cfa0a9c65e4748755bc352ae",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 11526,
@@ -121,8 +121,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/catchorg/Catch2/archive/v2.13.7.tar.gz",
-                    "sha256": "3cdb4138a072e4c0290034fe22d9f0a80d3bcfb8d7a8a5c49ad75d3a5da24fae",
+                    "url": "https://github.com/catchorg/Catch2/archive/v2.13.8.tar.gz",
+                    "sha256": "b9b592bd743c09f13ee4bf35fc30eeee2748963184f6bea836b146e6cc2a585a",
                     "x-checker-data": {
                         "type": "anitya",
                         "stable-only": true,
@@ -142,8 +142,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nlohmann/json/archive/v3.10.4.tar.gz",
-                    "sha256": "1155fd1a83049767360e9a120c43c578145db3204d2b309eba49fbbedd0f4ed3",
+                    "url": "https://github.com/nlohmann/json/archive/v3.10.5.tar.gz",
+                    "sha256": "5daca6ca216495edf89d167f808d1d03c4a4d929cef7da5e10f135ae1540c7e4",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 141453,
