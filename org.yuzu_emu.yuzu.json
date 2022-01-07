@@ -80,8 +80,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/fmtlib/fmt/releases/download/8.0.1/fmt-8.0.1.zip",
-                    "sha256": "a627a56eab9554fc1e5dd9a623d0768583b3a383ff70a4312ba68f94c9d415bf",
+                    "url": "https://github.com/fmtlib/fmt/releases/download/8.1.1/fmt-8.1.1.zip",
+                    "sha256": "23778bad8edba12d76e4075da06db591f3b0e3c6c04928ced4a7282ca3400e5d",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 11526,
@@ -121,8 +121,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/catchorg/Catch2/archive/v2.13.7.tar.gz",
-                    "sha256": "3cdb4138a072e4c0290034fe22d9f0a80d3bcfb8d7a8a5c49ad75d3a5da24fae",
+                    "url": "https://github.com/catchorg/Catch2/archive/v2.13.8.tar.gz",
+                    "sha256": "b9b592bd743c09f13ee4bf35fc30eeee2748963184f6bea836b146e6cc2a585a",
                     "x-checker-data": {
                         "type": "anitya",
                         "stable-only": true,
@@ -142,8 +142,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nlohmann/json/archive/v3.10.4.tar.gz",
-                    "sha256": "1155fd1a83049767360e9a120c43c578145db3204d2b309eba49fbbedd0f4ed3",
+                    "url": "https://github.com/nlohmann/json/archive/v3.10.5.tar.gz",
+                    "sha256": "5daca6ca216495edf89d167f808d1d03c4a4d929cef7da5e10f135ae1540c7e4",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 141453,
@@ -233,8 +233,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-868",
-                    "commit": "a7a5be1761254feed63c289f9351347e3a641d6b",
+                    "tag": "mainline-0-870",
+                    "commit": "43771282accaa35b9ccc7bbe906073e2b93a587b",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
