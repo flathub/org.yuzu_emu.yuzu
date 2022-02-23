@@ -13,6 +13,12 @@ EOF
     zenity --warning --no-wrap --title "That's awkward ..." --text "$MESSAGE"
 }
 
+# Discord RPC
+for i in {0..9}; do
+    test -S $XDG_RUNTIME_DIR/discord-ipc-$i || ln -sf {app/com.discordapp.Discord,$XDG_RUNTIME_DIR}/discord-ipc-$i;
+done
+
+
 if ! prlimit --nofile=8192 yuzu "$@"; then
     report_error
 fi
