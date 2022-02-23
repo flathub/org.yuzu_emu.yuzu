@@ -13,7 +13,8 @@
         "--socket=fallback-x11",
         "--socket=pulseaudio",
         "--share=network",
-        "--share=ipc"
+        "--share=ipc",
+        "--filesystem=xdg-run/app/com.discordapp.Discord:create"
     ],
     "cleanup-commands": [
         "/app/cleanup-BaseApp.sh"
