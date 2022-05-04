@@ -6,8 +6,6 @@
     "base": "io.qt.qtwebengine.BaseApp",
     "base-version": "5.15-21.08",
     "command": "yuzu-launcher",
-    "rename-desktop-file": "yuzu.desktop",
-    "rename-icon": "yuzu",
     "finish-args": [
         "--device=all",
         "--socket=fallback-x11",
@@ -226,14 +224,15 @@
             ],
             "post-install": [
                 "install -Dm755 ../yuzu-launcher.sh /app/bin/yuzu-launcher",
+                "install -Dm644 ../org.yuzu_emu.yuzu.metainfo.xml /app/share/appdata/org.yuzu_emu.yuzu.metainfo.xml",
                 "desktop-file-edit --set-key StartupWMClass --set-value yuzu --set-key Exec --set-value yuzu-launcher /app/share/applications/org.yuzu_emu.yuzu.desktop"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-1001",
-                    "commit": "6bbfbdad9b04c5352fd43263472c9f38cd407369",
+                    "tag": "mainline-0-1004",
+                    "commit": "584a72c3a44b1e90491228044ae559e94d652ce7",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
