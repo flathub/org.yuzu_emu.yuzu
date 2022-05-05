@@ -147,7 +147,7 @@
                     "sha256": "5daca6ca216495edf89d167f808d1d03c4a4d929cef7da5e10f135ae1540c7e4",
                     "x-checker-data": {
                         "type": "anitya",
-                        "project-id": 141453,
+                        "project-id": 11152,
                         "url-template": "https://github.com/nlohmann/json/archive/v$version.tar.gz"
                     }
                 }
