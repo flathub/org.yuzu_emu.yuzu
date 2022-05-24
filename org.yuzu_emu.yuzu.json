@@ -116,6 +116,7 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
+                "-DCATCH_INSTALL_EXTRAS=ON",
                 "-DCATCH_BUILD_TESTING=OFF"
             ],
             "builddir": true,
@@ -231,8 +232,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-1021",
-                    "commit": "e89660abb7d587fab6e75d1b6ae739635dcdc186",
+                    "tag": "mainline-0-1026",
+                    "commit": "8c088091a5593c7b551da05cd60873f5ba196cdf",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
