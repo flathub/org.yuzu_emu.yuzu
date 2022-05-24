@@ -37,6 +37,7 @@
             "name": "libzip",
             "buildsystem": "cmake-ninja",
             "config-opts": [
+                "-DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON",
                 "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
             ],
             "sources": [
@@ -76,6 +77,7 @@
             "name": "fmt",
             "buildsystem": "cmake-ninja",
             "config-opts": [
+                "-DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON",
                 "-DFMT_TEST=OFF"
             ],
             "sources": [
@@ -139,6 +141,7 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
+                "-DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON",
                 "-DJSON_BuildTests=OFF"
             ],
             "sources": [
@@ -208,8 +211,8 @@
                 "-DENABLE_COMPATIBILITY_LIST_DOWNLOAD=ON",
                 "-DYUZU_USE_QT_WEB_ENGINE=ON",
                 "-DYUZU_USE_BUNDLED_FFMPEG=ON",
-                "-DDISPLAY_VERSION=1021",
-                "-DBUILD_TAG=mainline-1021",
+                "-DDISPLAY_VERSION=1026",
+                "-DBUILD_TAG=mainline-1026",
                 "-DBUILD_REPOSITORY=yuzu-emu/yuzu-mainline"
             ],
             "build-options": {
