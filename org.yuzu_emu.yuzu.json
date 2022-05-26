@@ -125,8 +125,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/catchorg/Catch2/archive/v2.13.9.tar.gz",
-                    "sha256": "06dbc7620e3b96c2b69d57bf337028bf245a211b3cddb843835bfe258f427a52",
+                    "url": "https://github.com/catchorg/Catch2/archive/v3.0.1.tar.gz",
+                    "sha256": "8c4173c68ae7da1b5b505194a0c2d6f1b2aef4ec1e3e7463bde451f26bbaf4e7",
                     "x-checker-data": {
                         "type": "anitya",
                         "stable-only": true,
@@ -235,8 +235,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-1026",
-                    "commit": "8c088091a5593c7b551da05cd60873f5ba196cdf",
+                    "tag": "mainline-0-1030",
+                    "commit": "01176a1a1e71b92bcaa65e712c9e724dc1e97132",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
