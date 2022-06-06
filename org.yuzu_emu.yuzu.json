@@ -102,8 +102,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KhronosGroup/glslang/archive/11.9.0.tar.gz",
-                    "sha256": "d5744adba19eef9ad3d73f524226b39fec559d94cb582cd442e3c5de930004b2",
+                    "url": "https://github.com/KhronosGroup/glslang/archive/11.10.0.tar.gz",
+                    "sha256": "8ffc19c435232d09299dd2c91e247292b3508c1b826a3497c60682e4bbf2d602",
                     "x-checker-data": {
                         "type": "anitya",
                         "stable-only": true,
@@ -125,8 +125,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/catchorg/Catch2/archive/v2.13.9.tar.gz",
-                    "sha256": "06dbc7620e3b96c2b69d57bf337028bf245a211b3cddb843835bfe258f427a52",
+                    "url": "https://github.com/catchorg/Catch2/archive/v3.0.1.tar.gz",
+                    "sha256": "8c4173c68ae7da1b5b505194a0c2d6f1b2aef4ec1e3e7463bde451f26bbaf4e7",
                     "x-checker-data": {
                         "type": "anitya",
                         "stable-only": true,
@@ -235,8 +235,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-1039",
-                    "commit": "983afc5328725109a1cf13c61103b8a553c005d0",
+                    "tag": "mainline-0-1043",
+                    "commit": "c15e888c4f21a61a719c15d8d95de2decc0c19c1",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
