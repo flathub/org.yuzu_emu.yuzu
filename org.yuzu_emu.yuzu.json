@@ -130,6 +130,7 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "stable-only": true,
+                        "versions": {"<": "3.0.0"},
                         "project-id": 7680,
                         "url-template": "https://github.com/catchorg/Catch2/archive/v$version.tar.gz"
                     }
