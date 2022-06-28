@@ -43,8 +43,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nih-at/libzip/archive/v1.9.0.tar.gz",
-                    "sha256": "e6755f5fe67fcf92e6a2366e5a66c8c614b4d2d39fecd48cde8f9925eb03918a",
+                    "url": "https://github.com/nih-at/libzip/archive/v1.9.1.tar.gz",
+                    "sha256": "506cadc6a992b28279be1e4b4e6590be6225c9c199fb53d8204cfea9c21db7b6",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10649,
@@ -238,8 +238,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-1060",
-                    "commit": "fb371c81664b6a826b45e02c1ee2c699b3dd64e2",
+                    "tag": "mainline-0-1068",
+                    "commit": "30b135212bac55dcbbb4ca62dd6cb06441153a65",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
