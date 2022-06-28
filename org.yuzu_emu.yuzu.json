@@ -238,8 +238,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-1060",
-                    "commit": "fb371c81664b6a826b45e02c1ee2c699b3dd64e2",
+                    "tag": "mainline-0-1068",
+                    "commit": "30b135212bac55dcbbb4ca62dd6cb06441153a65",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
