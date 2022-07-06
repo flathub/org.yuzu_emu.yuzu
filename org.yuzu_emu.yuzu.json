@@ -83,8 +83,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/fmtlib/fmt/releases/download/8.1.1/fmt-8.1.1.zip",
-                    "sha256": "23778bad8edba12d76e4075da06db591f3b0e3c6c04928ced4a7282ca3400e5d",
+                    "url": "https://github.com/fmtlib/fmt/releases/download/9.0.0/fmt-9.0.0.zip",
+                    "sha256": "fc96dd2d2fdf2bded630787adba892c23cb9e35c6fd3273c136b0c57d4651ad6",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 11526,
@@ -239,8 +239,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-1076",
-                    "commit": "4aa4aa9e33afb4716a379063740017e33437b626",
+                    "tag": "mainline-0-1079",
+                    "commit": "1a4d4f2057abad4fad4d25b2e011fd2ba098a1de",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
