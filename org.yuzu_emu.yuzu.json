@@ -88,6 +88,9 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 11526,
+                        "versions": {
+                            "<": "9.0.0"
+                        },
                         "url-template": "https://github.com/fmtlib/fmt/releases/download/$version/fmt-$version.zip"
                     }
                 }
