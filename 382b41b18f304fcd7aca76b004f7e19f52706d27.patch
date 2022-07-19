@@ -1,0 +1,40 @@
+From 382b41b18f304fcd7aca76b004f7e19f52706d27 Mon Sep 17 00:00:00 2001
+From: Liam <byteslice@airmail.cc>
+Date: Tue, 19 Jul 2022 17:46:26 -0400
+Subject: [PATCH] video_core: use correct byte size for framebuffer
+
+---
+ src/video_core/renderer_vulkan/vk_blit_screen.cpp | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+
+diff --git a/src/video_core/renderer_vulkan/vk_blit_screen.cpp b/src/video_core/renderer_vulkan/vk_blit_screen.cpp
+index 1ec8392e142f..4a1d96322239 100644
+--- a/src/video_core/renderer_vulkan/vk_blit_screen.cpp
++++ b/src/video_core/renderer_vulkan/vk_blit_screen.cpp
+@@ -87,8 +87,12 @@ u32 GetBytesPerPixel(const Tegra::FramebufferConfig& framebuffer) {
+ }
+ 
+ std::size_t GetSizeInBytes(const Tegra::FramebufferConfig& framebuffer) {
+-    return static_cast<std::size_t>(framebuffer.stride) *
+-           static_cast<std::size_t>(framebuffer.height) * GetBytesPerPixel(framebuffer);
++    // TODO(Rodrigo): Read this from HLE
++    constexpr u32 block_height_log2 = 4;
++    const u32 bytes_per_pixel = GetBytesPerPixel(framebuffer);
++    const u64 size_bytes{Tegra::Texture::CalculateSize(
++        true, bytes_per_pixel, framebuffer.stride, framebuffer.height, 1, block_height_log2, 0)};
++    return size_bytes;
+ }
+ 
+ VkFormat GetFormat(const Tegra::FramebufferConfig& framebuffer) {
+@@ -169,9 +173,8 @@ VkSemaphore BlitScreen::Draw(const Tegra::FramebufferConfig& framebuffer,
+         // TODO(Rodrigo): Read this from HLE
+         constexpr u32 block_height_log2 = 4;
+         const u32 bytes_per_pixel = GetBytesPerPixel(framebuffer);
+-        const u64 size_bytes{Tegra::Texture::CalculateSize(true, bytes_per_pixel,
+-                                                           framebuffer.stride, framebuffer.height,
+-                                                           1, block_height_log2, 0)};
++        const u64 size_bytes{GetSizeInBytes(framebuffer)};
++
+         Tegra::Texture::UnswizzleTexture(
+             mapped_span.subspan(image_offset, size_bytes), std::span(host_ptr, size_bytes),
+             bytes_per_pixel, framebuffer.width, framebuffer.height, 1, block_height_log2, 0);
