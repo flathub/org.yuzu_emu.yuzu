@@ -1,4 +1,4 @@
-name: Crash Report
+name: Bug Report
 labels: ["bug"]
 description: 'Please use this template if you encountered rendering issues or glitches (not a crash or freeze)'
 body:
