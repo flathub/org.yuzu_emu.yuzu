@@ -64,27 +64,5 @@
     <release version="mainline-0-1085" date="2022-07-12"/>
     <release version="mainline-0-1084" date="2022-07-11"/>
     <release version="mainline-0-1083" date="2022-07-11"/>
-    <release version="mainline-0-1076" date="2022-07-06"/>
-    <release version="mainline-0-1075" date="2022-07-05"/>
-    <release version="mainline-0-1074" date="2022-07-05"/>
-    <release version="mainline-0-1060" date="2022-06-20"/>
-    <release version="mainline-0-1059" date="2022-06-19"/>
-    <release version="mainline-0-1058" date="2022-06-19"/>
-    <release version="mainline-0-1039" date="2022-06-02"/>
-    <release version="mainline-0-1026" date="2022-05-24"/>
-    <release version="mainline-0-1021" date="2022-05-18"/>
-    <release version="mainline-0-1020" date="2022-05-17"/>
-    <release version="mainline-0-1019" date="2022-05-17"/>
-    <release version="mainline-0-1014" date="2022-05-12"/>
-    <release version="mainline-0-1013" date="2022-05-11"/>
-    <release version="mainline-0-1012" date="2022-05-10"/>
-    <release version="mainline-0-1011" date="2022-05-10"/>
-    <release version="mainline-0-1010" date="2022-05-08"/>
-    <release version="mainline-0-1009" date="2022-05-07"/>
-    <release version="mainline-0-1008" date="2022-05-06"/>
-    <release version="mainline-0-1007" date="2022-05-05"/>
-    <release version="mainline-0-1006" date="2022-05-05"/>
-    <release version="mainline-0-1005" date="2022-05-03"/>
-    <release version="mainline-0-1001" date="2022-04-30"/>
   </releases>
 </component>
