@@ -36,10 +36,10 @@ Obtaining a debugger trace is a bit complicated, so please bear with us:
 3. Execute this command in your terminal: `flatpak run --devel --command=sh org.yuzu_emu.yuzu`
 4. Type `gdb /app/bin/yuzu` in the coming up prompt and wait for the `(gdb)` prompt to show up
 5. Type <kbd>r</kbd> and hit <kbd>Enter</kbd> to launch yuzu under the debugger
-6. **Before loading your game**, go to `Emulation` -> `Configure ...` menu. Choose `General` on the left-sidebar, then choose `Debug` tab on the right panel. And then, select the `CPU` tab on the second-level panel, you will see the `Toggle CPU optimizations` options. Please **uncheck** the **Enable fast dispatcher** checkbox (as this would interfere with the debugger) and click the `Confirm` button at the buttom of the dialog.
+6. **Before loading your game**, go to `Emulation` -> `Configure ...` menu. Choose `General` on the left-sidebar, then choose `Debug` tab on the right panel. And then, select the `CPU` tab on the second-level panel, you will see the `Toggle CPU optimizations` options. Please **uncheck both** the **Enable Host MMU Emulation (general memory instructions)** and **Enable Host MMU Emulation (exclusive memory instructions)** checkboxes (as those would interfere with the debugger) ![yuzu settings 0](./assets/yuzu-settings-0.png) ![yuzu settings 1](./assets/yuzu-settings-1.png)  ![yuzu settings 2](./assets/yuzu-settings-2.png) and click the `Confirm` button at the buttom of the dialog.
 7. Load the game that caused the crash and repeat the steps you think that may have crashed or freezed yuzu
 8. When the crash or freeze happens, switch back to the terminal and type `bt` at the `(gdb)` prompt
-9. If `gdb` asks `--Type <RET> for more, q to quit, c to continue without paging--`, type <kbd>kbd</kbd>c to show all the output
+9. If `gdb` asks `--Type <RET> for more, q to quit, c to continue without paging--`, type <kbd>c</kbd> to show all the output
 10. Copy and paste all the output to a new text file, and attach this file to your report
 11. Type <kbd>q</kbd> to kill both the debugger and crashed yuzu
 12. (Optional) You might want to undo step (6) to avoid performance penalty after this process
