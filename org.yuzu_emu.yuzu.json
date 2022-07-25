@@ -265,6 +265,10 @@
                 {
                     "type": "file",
                     "path": "compatibility_list.json"
+                },
+                {
+                    "type": "patch",
+                    "path": "c6fa2b3fb46186c523d72486563c979f28db3d69.patch"
                 }
             ]
         }

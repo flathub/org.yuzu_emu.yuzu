@@ -1,0 +1,32 @@
+From c6fa2b3fb46186c523d72486563c979f28db3d69 Mon Sep 17 00:00:00 2001
+From: snek <me@gus.host>
+Date: Sun, 24 Jul 2022 18:16:02 -0700
+Subject: [PATCH] a
+
+---
+ src/yuzu/main.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/yuzu/main.cpp b/src/yuzu/main.cpp
+index f8bf1128872..a06f7202212 100644
+--- a/src/yuzu/main.cpp
++++ b/src/yuzu/main.cpp
+@@ -1368,14 +1368,16 @@ void GMainWindow::HandleSigInterrupt(int sig) {
+     // Calling into Qt directly from a signal handler is not safe,
+     // so wake up a QSocketNotifier with this hacky write call instead.
+     char a = 1;
+-    (void)write(sig_interrupt_fds[0], &a, sizeof(a));
++    int ret = write(sig_interrupt_fds[0], &a, sizeof(a));
++    (void)ret;
+ }
+ 
+ void GMainWindow::OnSigInterruptNotifierActivated() {
+     sig_interrupt_notifier->setEnabled(false);
+ 
+     char a;
+-    (void)read(sig_interrupt_fds[1], &a, sizeof(a));
++    int ret = read(sig_interrupt_fds[1], &a, sizeof(a));
++    (void)ret;
+ 
+     sig_interrupt_notifier->setEnabled(true);
+ 
