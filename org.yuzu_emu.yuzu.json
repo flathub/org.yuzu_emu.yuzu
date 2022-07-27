@@ -15,8 +15,7 @@
         "--filesystem=xdg-run/app/com.discordapp.Discord:create",
         "--filesystem=home:ro",
         "--filesystem=/run/media:ro",
-        "--talk-name=org.freedesktop.login1.Manager",
-        "--talk-name=org.freedesktop.portal.Inhibit"
+        "--talk-name=org.freedesktop.login1.Manager"
     ],
     "cleanup-commands": [
         "/app/cleanup-BaseApp.sh"
