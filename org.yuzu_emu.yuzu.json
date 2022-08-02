@@ -265,7 +265,8 @@
                 },
                 {
                     "type": "file",
-                    "path": "compatibility_list.json"
+                    "path": "compatibility_list.json",
+                    "dest": "dist/compatibility_list"
                 }
             ]
         }
