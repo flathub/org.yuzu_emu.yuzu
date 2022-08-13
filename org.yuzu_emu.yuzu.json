@@ -154,8 +154,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nlohmann/json/archive/v3.11.1.tar.gz",
-                    "sha256": "598becb62ee0e01cf32795073c8ae09b6e95335cd43a4417b785d93ce105b0d0",
+                    "url": "https://github.com/nlohmann/json/archive/v3.11.2.tar.gz",
+                    "sha256": "d69f9deb6a75e2580465c6c4c5111b89c4dc2fa94e3a85fcd2ffcd9a143d9273",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 11152,
@@ -243,8 +243,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-1130",
-                    "commit": "91c58b56a8f78792f8c6d7429f2bad8c729ad904",
+                    "tag": "mainline-0-1131",
+                    "commit": "9f7e98c0570765824a7ad6791a6f8077515caec8",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
