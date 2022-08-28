@@ -56,10 +56,11 @@
         },
         {
             "name": "zstd",
-            "buildsystem": "simple",
-            "build-commands": [
-                "make -j $FLATPAK_BUILDER_N_JOBS",
-                "make PREFIX=/ DESTDIR=\"${FLATPAK_DEST}\" install"
+            "buildsystem": "meson",
+            "subdir": "build/meson",
+            "config-opts": [
+                "-Dbin_programs=false",
+                "-Dbin_contrib=false"
             ],
             "sources": [
                 {
