@@ -25,4 +25,4 @@ jobs:
             const mergebot = require('./.github/workflows/merge.js');
             const branch = await mergebot.checkChanges(github, context);
             if (branch)
-              await mergeChanges(branch, execa);
+              await mergebot.mergeChanges(branch, execa);

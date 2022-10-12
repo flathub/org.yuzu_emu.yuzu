@@ -93,7 +93,7 @@ async function checkChanges(github, context) {
   }
   const chosen = auto_prs[0];
   const should_close = auto_prs.slice(1);
-  console.log(`Selected pull request: #${chosen.num}`);
+  console.log(`Selected pull request: #${chosen.number}`);
   await closePullRequests(should_close, github);
   return chosen.headRefName;
 }
