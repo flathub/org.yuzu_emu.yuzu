@@ -58,7 +58,7 @@ async function mergeChanges(branch, execa) {
       "org.yuzu_emu.yuzu.json",
     ]);
     const process1 = await execa("git", ["commit", "--amend"]);
-    process1.stdout.pipe(process.stdout);
+    process1.stdout.pipe(process1.stdout);
   } catch (err) {
     console.log(
       `::error title=Merge failed::Failed to merge pull request: ${err}`,
