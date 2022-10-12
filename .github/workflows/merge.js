@@ -56,7 +56,7 @@ async function mergeChanges(branch, execa) {
     await incrementVersion();
     await execa("git", [
       "add",
-      "org.yuzu_emu.yuzu.json"
+      "org.yuzu_emu.yuzu.json",
     ]);
     const process1 = await execa("git", ["commit", "--amend"]);
     process1.stdout.pipe(process.stdout);
@@ -66,9 +66,14 @@ async function mergeChanges(branch, execa) {
     );
   }
 
-  const process = await execa("git", ["push", "origin", `master:${branch}`, "-f"]);
+  const process = await execa("git", [
+    "push",
+    "origin",
+    `master:${branch}`,
+    "-f",
+  ]);
   process.stdout.pipe(process.stdout);
-  await new Promise(r => setTimeout(r, 2000));
+  await new Promise((r) => setTimeout(r, 2000));
   const process1 = await execa("git", ["push", "origin"]);
   process1.stdout.pipe(process1.stdout);
 }

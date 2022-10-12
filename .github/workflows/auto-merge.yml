@@ -23,6 +23,6 @@ jobs:
           script: |
             const execa = require("execa");
             const mergebot = require('./.github/workflows/merge.js');
-            const branch = await mergebot.checkChanges(github);
+            const branch = await mergebot.checkChanges(github, context);
             if (branch)
               await mergeChanges(branch, execa);
