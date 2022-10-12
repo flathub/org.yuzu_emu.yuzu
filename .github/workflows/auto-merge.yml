@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
           submodules: true
       - run: npm install execa@5
-      - uses: actions/github-script@v5
+      - uses: actions/github-script@v6
         name: Check and Merge
         id: check-changes
         with:

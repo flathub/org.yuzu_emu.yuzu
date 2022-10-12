@@ -45,7 +45,6 @@ async function incrementVersion() {
 }
 
 async function mergeChanges(branch, execa) {
-  let mergeResults = {};
   try {
     const process = await execa("git", [
       "merge",
@@ -64,6 +63,7 @@ async function mergeChanges(branch, execa) {
     console.log(
       `::error title=Merge failed::Failed to merge pull request: ${err}`,
     );
+    return;
   }
 
   const process = await execa("git", [
