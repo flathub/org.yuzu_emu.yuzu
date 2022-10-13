@@ -23,10 +23,9 @@ async function closePullRequests(should_close, github) {
     console.log("Closing other pull requests ...");
     let mut = "";
     for (let i = 0; i < should_close.length; i++) {
-      mut += close_pr_mutation.replace("{num}", i).replace(
-        "{id}",
-        should_close[i].id,
-      );
+      mut += close_pr_mutation
+        .replace("{num}", i)
+        .replace("{id}", should_close[i].id);
       mut += "\n";
     }
     await github.graphql(mut);
@@ -35,47 +34,36 @@ async function closePullRequests(should_close, github) {
 }
 
 async function incrementVersion() {
-  const manifest = fs.readFileSync("org.yuzu_emu.yuzu.json");
+  const manifest = fs.readFileSync("org.yuzu_emu.yuzu.json", {
+    encoding: "utf8",
+  });
   const version = /mainline-0-(\d+)/.exec(manifest)[1];
-  const new_manifest = manifest.replace(
-    /-DDISPLAY_VERSION=\d+/,
-    `-DDISPLAY_VERSION=${version}`,
-  ).replace(/-DBUILD_TAG=mainline-\d+/, `-DBUILD_TAG=mainline-${version}`);
+  const new_manifest = manifest
+    .replace(/-DDISPLAY_VERSION=\d+/, `-DDISPLAY_VERSION=${version}`)
+    .replace(/-DBUILD_TAG=mainline-\d+/, `-DBUILD_TAG=mainline-${version}`);
   fs.writeFileSync("org.yuzu_emu.yuzu.json", new_manifest);
 }
 
 async function mergeChanges(branch, execa) {
   try {
-    const p = execa("git", [
-      "merge",
-      "--ff-only",
-      `origin/${branch}`,
-    ]);
+    const p = execa("git", ["merge", "--ff-only", `origin/${branch}`]);
     p.stdout.pipe(process.stdout);
     await p;
     // bump the version number
     await incrementVersion();
-    await execa("git", [
-      "add",
-      "org.yuzu_emu.yuzu.json",
-    ]);
+    await execa("git", ["add", "org.yuzu_emu.yuzu.json"]);
     // amend the commit to include the version change
     const p1 = execa("git", ["commit", "--amend"]);
     p1.stdout.pipe(process.stdout);
     await p1;
   } catch (err) {
     console.log(
-      `::error title=Merge failed::Failed to merge pull request: ${err}`,
+      `::error title=Merge failed::Failed to merge pull request: ${err}`
     );
     return;
   }
 
-  const p = execa("git", [
-    "push",
-    "origin",
-    `master:${branch}`,
-    "-f",
-  ]);
+  const p = execa("git", ["push", "origin", `master:${branch}`, "-f"]);
   p.stdout.pipe(process.stdout);
   await p;
   await new Promise((r) => setTimeout(r, 2000));
@@ -92,7 +80,7 @@ async function checkChanges(github, context) {
   const result = await github.graphql(check_query, variables);
   const prs = result.repository.pullRequests.nodes;
   const auto_prs = prs.filter(
-    (pr) => pr.author.login === "flathubbot" && pr.mergeable === "MERGEABLE",
+    (pr) => pr.author.login === "flathubbot" && pr.mergeable === "MERGEABLE"
   );
   if (auto_prs.length < 1) {
     console.warn("No pull requests available for merge.");
