@@ -15,7 +15,7 @@ const check_query = `query($name: String!){
 }`;
 
 const close_pr_mutation = `mutation cpm_{num} {
-  closePullRequest(input: {pullRequestId: "{id}"})
+  closePullRequest(input: {pullRequestId: "{id}"}) { clientMutationId }
 }`;
 
 async function closePullRequests(should_close, github) {
@@ -46,19 +46,23 @@ async function incrementVersion() {
 
 async function mergeChanges(branch, execa) {
   try {
-    const p = await execa("git", [
+    const p = execa("git", [
       "merge",
       "--ff-only",
       `origin/${branch}`,
     ]);
     p.stdout.pipe(process.stdout);
+    await p;
+    // bump the version number
     await incrementVersion();
     await execa("git", [
       "add",
       "org.yuzu_emu.yuzu.json",
     ]);
-    const p1 = await execa("git", ["commit", "--amend"]);
+    // amend the commit to include the version change
+    const p1 = execa("git", ["commit", "--amend"]);
     p1.stdout.pipe(process.stdout);
+    await p1;
   } catch (err) {
     console.log(
       `::error title=Merge failed::Failed to merge pull request: ${err}`,
@@ -66,16 +70,19 @@ async function mergeChanges(branch, execa) {
     return;
   }
 
-  const p = await execa("git", [
+  const p = execa("git", [
     "push",
     "origin",
     `master:${branch}`,
     "-f",
   ]);
   p.stdout.pipe(process.stdout);
+  await p;
   await new Promise((r) => setTimeout(r, 2000));
-  const p1 = await execa("git", ["push", "origin"]);
+  // wait a while for GitHub to process the pull request update
+  const p1 = execa("git", ["push", "origin"]);
   p1.stdout.pipe(process.stdout);
+  await p1;
 }
 
 async function checkChanges(github, context) {
