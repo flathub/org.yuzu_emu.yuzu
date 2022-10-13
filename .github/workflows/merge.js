@@ -46,19 +46,19 @@ async function incrementVersion() {
 
 async function mergeChanges(branch, execa) {
   try {
-    const process = await execa("git", [
+    const p = await execa("git", [
       "merge",
       "--ff-only",
       `origin/${branch}`,
     ]);
-    process.stdout.pipe(process.stdout);
+    p.stdout.pipe(process.stdout);
     await incrementVersion();
     await execa("git", [
       "add",
       "org.yuzu_emu.yuzu.json",
     ]);
-    const process1 = await execa("git", ["commit", "--amend"]);
-    process1.stdout.pipe(process1.stdout);
+    const p1 = await execa("git", ["commit", "--amend"]);
+    p1.stdout.pipe(process.stdout);
   } catch (err) {
     console.log(
       `::error title=Merge failed::Failed to merge pull request: ${err}`,
@@ -66,16 +66,16 @@ async function mergeChanges(branch, execa) {
     return;
   }
 
-  const process = await execa("git", [
+  const p = await execa("git", [
     "push",
     "origin",
     `master:${branch}`,
     "-f",
   ]);
-  process.stdout.pipe(process.stdout);
+  p.stdout.pipe(process.stdout);
   await new Promise((r) => setTimeout(r, 2000));
-  const process1 = await execa("git", ["push", "origin"]);
-  process1.stdout.pipe(process1.stdout);
+  const p1 = await execa("git", ["push", "origin"]);
+  p1.stdout.pipe(process.stdout);
 }
 
 async function checkChanges(github, context) {
