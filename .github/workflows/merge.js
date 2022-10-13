@@ -60,7 +60,7 @@ async function mergeChanges(branch, execa) {
     ]);
     await execa("git", ["add", "org.yuzu_emu.yuzu.json"]);
     // amend the commit to include the version change
-    const p1 = execa("git", ["commit", "--amend"]);
+    const p1 = execa("git", ["commit", "--amend", "-C", "HEAD"]);
     p1.stdout.pipe(process.stdout);
     await p1;
   } catch (err) {
