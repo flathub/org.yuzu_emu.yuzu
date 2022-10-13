@@ -51,6 +51,13 @@ async function mergeChanges(branch, execa) {
     await p;
     // bump the version number
     await incrementVersion();
+    await execa("git", ["config", "--global", "user.name", "yuzubot"]);
+    await execa("git", [
+      "config",
+      "--global",
+      "user.email",
+      "yuzu\x40yuzu-emu\x2eorg", // prevent email harvesters from scraping the address
+    ]);
     await execa("git", ["add", "org.yuzu_emu.yuzu.json"]);
     // amend the commit to include the version change
     const p1 = execa("git", ["commit", "--amend"]);
