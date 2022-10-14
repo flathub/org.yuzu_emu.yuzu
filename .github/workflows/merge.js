@@ -45,12 +45,7 @@ async function incrementVersion() {
 }
 
 async function mergeChanges(branch, execa) {
-  try {
-    const p = execa("git", ["merge", "--ff-only", `origin/${branch}`]);
-    p.stdout.pipe(process.stdout);
-    await p;
-    // bump the version number
-    await incrementVersion();
+  async function amendCommit() {
     await execa("git", ["config", "--global", "user.name", "yuzubot"]);
     await execa("git", [
       "config",
@@ -63,6 +58,27 @@ async function mergeChanges(branch, execa) {
     const p1 = execa("git", ["commit", "--amend", "-C", "HEAD"]);
     p1.stdout.pipe(process.stdout);
     await p1;
+  }
+
+  async function hasChanges() {
+    const p = await execa("git", [
+      "status",
+      "--porcelain",
+      "org.yuzu_emu.yuzu.json",
+    ]);
+    if (p.stdout.length > 2) {
+      return true;
+    }
+    return false;
+  }
+
+  try {
+    const p = execa("git", ["merge", "--ff-only", `origin/${branch}`]);
+    p.stdout.pipe(process.stdout);
+    await p;
+    // bump the version number
+    await incrementVersion();
+    if (hasChanges()) await amendCommit();
   } catch (err) {
     console.log(
       `::error title=Merge failed::Failed to merge pull request: ${err}`
