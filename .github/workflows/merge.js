@@ -67,7 +67,7 @@ async function mergeChanges(branch, execa) {
       "org.yuzu_emu.yuzu.json",
     ]);
     if (p.stdout.length > 20) {
-      console.info("Skip version bump.");
+      console.info("Version was bumped by this script.");
       return true;
     }
     return false;
@@ -79,7 +79,7 @@ async function mergeChanges(branch, execa) {
     await p;
     // bump the version number
     await incrementVersion();
-    if (hasChanges()) await amendCommit();
+    if (await hasChanges()) await amendCommit();
   } catch (err) {
     console.log(
       `::error title=Merge failed::Failed to merge pull request: ${err}`
