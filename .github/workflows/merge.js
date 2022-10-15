@@ -66,7 +66,8 @@ async function mergeChanges(branch, execa) {
       "--porcelain",
       "org.yuzu_emu.yuzu.json",
     ]);
-    if (p.stdout.length > 2) {
+    if (p.stdout.length > 20) {
+      console.info("Skip version bump.");
       return true;
     }
     return false;
