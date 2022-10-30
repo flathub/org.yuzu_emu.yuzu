@@ -226,8 +226,7 @@
             "build-options": {
                 "env": {
                     "TITLEBARFORMATIDLE": "yuzu {}",
-                    "TITLEBARFORMATRUNNING": "yuzu {} | {}",
-                    "LDFLAGS": "-L/app/lib -Wl,-z,relro,-z,now -Wl,--as-needed"
+                    "TITLEBARFORMATRUNNING": "yuzu {} | {}"
                 }
             },
             "cleanup": [
