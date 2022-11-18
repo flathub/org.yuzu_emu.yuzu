@@ -85,13 +85,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/fmtlib/fmt/releases/download/8.1.1/fmt-8.1.1.zip",
-                    "sha256": "23778bad8edba12d76e4075da06db591f3b0e3c6c04928ced4a7282ca3400e5d",
+                    "url": "https://github.com/fmtlib/fmt/releases/download/9.1.0/fmt-9.1.0.zip",
+                    "sha256": "cceb4cb9366e18a5742128cb3524ce5f50e88b476f1e54737a47ffdf4df4c996",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 11526,
                         "versions": {
-                            "<": "9.0.0"
+                            "<": "10.0.0"
                         },
                         "url-template": "https://github.com/fmtlib/fmt/releases/download/$version/fmt-$version.zip"
                     }
