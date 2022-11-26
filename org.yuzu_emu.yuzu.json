@@ -12,7 +12,7 @@
         "--socket=pulseaudio",
         "--share=network",
         "--share=ipc",
-        "--filesystem=xdg-run/app/com.discordapp.Discord:create",
+        "--filesystem=xdg-run/app/com.discordapp.Discord:ro",
         "--filesystem=home:ro",
         "--filesystem=/run/media:ro",
         "--talk-name=org.freedesktop.login1.Manager"
