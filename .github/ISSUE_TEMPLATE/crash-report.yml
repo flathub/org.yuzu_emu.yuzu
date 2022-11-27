@@ -5,7 +5,7 @@ body:
   - type: input
     attributes:
       label: yuzu Version
-      description: 'The version of yuzu you were using when this crash happened'
+      description: 'The version of yuzu you were using when this crash happened (can be found on the title bar)'
   - type: textarea
     attributes:
       label: Description
@@ -28,13 +28,15 @@ body:
     attributes:
       label: System Information
       description: 'If possible, install `inxi`, run `inxi -v3` on your system and paste the output here'
-      render: shell
+      render: 'bash session'
     validations:
       required: false
   - type: textarea
     attributes:
       label: Logs and Backtraces
-      description: 'If possible, please attach the yuzu log file and/or debugger backtrace file here ([how to obtain them](https://github.com/flathub/org.yuzu_emu.yuzu/blob/master/README.md#obtaining-necessary-information-for-bug-reports))'
+      description: |
+        If possible, please attach the yuzu log file and/or debugger backtrace file here ([how to obtain them](https://github.com/flathub/org.yuzu_emu.yuzu/blob/master/README.md#obtaining-necessary-information-for-bug-reports))
+        Please **avoid pasting the log** into this box. Instead, use the __file upload__ function to attach the file.
     validations:
       required: false
   - type: textarea

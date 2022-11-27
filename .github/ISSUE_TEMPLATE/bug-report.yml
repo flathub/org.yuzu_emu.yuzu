@@ -5,7 +5,7 @@ body:
   - type: input
     attributes:
       label: yuzu Version
-      description: 'The version of yuzu you were using when the issue happened'
+      description: 'The version of yuzu you were using when the issue happened (can be found on the title bar)'
   - type: textarea
     attributes:
       label: Description
@@ -20,13 +20,15 @@ body:
     attributes:
       label: System Information
       description: 'If possible, install `inxi`, run `inxi -v3` on your system and paste the output here'
-      render: shell
+      render: 'bash session'
     validations:
       required: false
   - type: textarea
     attributes:
       label: Logs
-      description: 'Please attach the yuzu log file here (how to obtain it: https://yuzu-emu.org/help/reference/log-files/)'
+      description: |
+        Please attach the yuzu log file here (how to obtain it: https://yuzu-emu.org/help/reference/log-files/)
+        Please **avoid pasting the log** into this box. Instead, use the __file upload__ function to attach the file.
     validations:
       required: true
   - type: textarea
