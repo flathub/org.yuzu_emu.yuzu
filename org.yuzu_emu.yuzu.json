@@ -223,6 +223,13 @@
                 "env": {
                     "TITLEBARFORMATIDLE": "yuzu {}",
                     "TITLEBARFORMATRUNNING": "yuzu {} | {}"
+                },
+                "arch": {
+                    "aarch64": {
+                        "config-opts": [
+                            "-DENABLE_OPENGL=OFF"
+                        ]
+                    }
                 }
             },
             "cleanup": [
