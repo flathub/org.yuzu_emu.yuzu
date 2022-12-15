@@ -65,6 +65,7 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 12083,
+                        "stable-only": true,
                         "url-template": "https://github.com/facebook/zstd/releases/download/v$version/zstd-$version.tar.gz"
                     }
                 }
