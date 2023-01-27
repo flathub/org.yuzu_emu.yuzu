@@ -26,6 +26,7 @@
   <url type="translate">https://www.transifex.com/yuzu-emulator/yuzu/</url>
   <url type="contact">https://community.citra-emu.org/</url>
   <url type="vcs-browser">https://github.com/yuzu-emu/yuzu/</url>
+  <url type="contribute">https://github.com/yuzu-emu/yuzu/wiki/Contributing#contributing</url>
   <launchable type="desktop-id">org.yuzu_emu.yuzu.desktop</launchable>
   <provides>
     <binary>yuzu</binary>
