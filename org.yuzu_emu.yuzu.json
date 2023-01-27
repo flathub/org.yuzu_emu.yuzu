@@ -126,13 +126,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/catchorg/Catch2/archive/v2.13.10.tar.gz",
-                    "sha256": "d54a712b7b1d7708bc7a819a8e6e47b2fde9536f487b89ccbca295072a7d9943",
+                    "url": "https://github.com/catchorg/Catch2/archive/v3.3.0.tar.gz",
+                    "sha256": "fe2f29a54ca775c2dd04bb97ffb79d398e6210e3caa174348b5cd3b7e4ca887d",
                     "x-checker-data": {
                         "type": "anitya",
                         "stable-only": true,
                         "versions": {
-                            "<": "3.0.0"
+                            "<": "4.0.0"
                         },
                         "project-id": 7680,
                         "url-template": "https://github.com/catchorg/Catch2/archive/v$version.tar.gz"
