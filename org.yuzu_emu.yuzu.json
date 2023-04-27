@@ -176,7 +176,7 @@
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 6845,
-                        "url-template": "https://boostorg.jfrog.io/artifactory/main/release/$version/source/boost_1_81_0.tar.bz2"
+                        "url-template": "https://boostorg.jfrog.io/artifactory/main/release/$version/source/boost_${version0}_${version1}_${version2}.tar.bz2"
                     }
                 }
             ]
