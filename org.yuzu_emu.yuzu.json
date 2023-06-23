@@ -39,8 +39,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/nih-at/libzip/archive/v1.9.2.tar.gz",
-                    "sha256": "7f28eaec7a02ca099ea9dad88fc8023f7f6ddfca54b780040ff7fdb39d9efb3c",
+                    "url": "https://github.com/nih-at/libzip/archive/v1.10.0.tar.gz",
+                    "sha256": "01f7272bb18965a9d59b9e5de7b390e04da8b6eb5bd7514e6fa32ae8dfe9df54",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10649,
