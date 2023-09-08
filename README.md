@@ -24,14 +24,14 @@ Obtaining a debugger trace is a bit complicated, so please bear with us:
 
 #### Obtaining a debugger trace after the crash
 
-1. Install debuggers in Flatpak: `flatpak install org.kde.Sdk//5.15-21.08`
+1. Install debuggers in Flatpak: `flatpak install org.kde.Sdk//5.15-22.08`
 2. Install debug information for yuzu: `flatpak install org.yuzu_emu.yuzu.Debug`
 3. Execute this command in your terminal: `flatpak-coredumpctl org.yuzu_emu.yuzu -m yuzu --gdb-arguments "--batch -ex 'thread apply all bt'" > /tmp/yuzu-backtrace.log`
 4. Please attach the file `/tmp/yuzu-backtrace.log` file to your report
 
 #### Obtaining a debugger trace as the crash happens
 
-1. Install debuggers in Flatpak: `flatpak install org.kde.Sdk//5.15-21.08`
+1. Install debuggers in Flatpak: `flatpak install org.kde.Sdk//5.15-22.08`
 2. Install debug information for yuzu: `flatpak install org.yuzu_emu.yuzu.Debug`
 3. Execute this command in your terminal: `flatpak run --devel --command=sh org.yuzu_emu.yuzu`
 4. Type `gdb /app/bin/yuzu` in the coming up prompt and wait for the `(gdb)` prompt to show up
