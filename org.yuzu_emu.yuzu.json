@@ -6,7 +6,7 @@
     "command": "yuzu-launcher",
     "finish-args": [
         "--device=all",
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio",
         "--share=network",
