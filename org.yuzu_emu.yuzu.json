@@ -104,8 +104,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KhronosGroup/glslang/archive/13.0.0.tar.gz",
-                    "sha256": "bcda732434f829aa74414ea0e06d329ec8ac28637c38a0de45e17c8fd25a4715",
+                    "url": "https://github.com/KhronosGroup/glslang/archive/13.1.0.tar.gz",
+                    "sha256": "926808f4bf129264a1b7d969978881ec041bb902ad49a180ba74270df7178494",
                     "x-checker-data": {
                         "type": "anitya",
                         "stable-only": true,
