@@ -104,8 +104,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/KhronosGroup/glslang/archive/13.0.0.tar.gz",
-                    "sha256": "bcda732434f829aa74414ea0e06d329ec8ac28637c38a0de45e17c8fd25a4715",
+                    "url": "https://github.com/KhronosGroup/glslang/archive/13.1.0.tar.gz",
+                    "sha256": "926808f4bf129264a1b7d969978881ec041bb902ad49a180ba74270df7178494",
                     "x-checker-data": {
                         "type": "anitya",
                         "stable-only": true,
@@ -216,8 +216,8 @@
                 "-DENABLE_COMPATIBILITY_LIST_DOWNLOAD=OFF",
                 "-DYUZU_USE_QT_WEB_ENGINE=OFF",
                 "-DYUZU_USE_BUNDLED_FFMPEG=ON",
-                "-DDISPLAY_VERSION=1588",
-                "-DBUILD_TAG=mainline-1588",
+                "-DDISPLAY_VERSION=1589",
+                "-DBUILD_TAG=mainline-1589",
                 "-DBUILD_REPOSITORY=yuzu-emu/yuzu-mainline"
             ],
             "build-options": {
@@ -247,8 +247,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-1588",
-                    "commit": "56e550c97622fe11c01777324a67af4327984aa8",
+                    "tag": "mainline-0-1589",
+                    "commit": "644cf7eab438233c2ef1d7cdd44699f8d4a46d2e",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
