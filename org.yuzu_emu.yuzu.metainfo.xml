@@ -49,6 +49,7 @@
     <screenshot>https://raw.githubusercontent.com/yuzu-emu/yuzu-emu.github.io/master/images/screenshots/039-Pok%C3%A9mon%20Mystery%20Dungeon%20Rescue%20Team%20DX.png.png.png</screenshot>
   </screenshots>
   <releases>
+    <release version="mainline-0-1609" date="2023-11-03"/>
     <release version="mainline-0-1608" date="2023-11-02"/>
     <release version="mainline-0-1607" date="2023-11-01"/>
     <release version="mainline-0-1606" date="2023-11-01"/>
