@@ -13,12 +13,6 @@ EOF
     zenity --warning --no-wrap --title "That's awkward ..." --text "$MESSAGE"
 }
 
-# Use X11 if user has a NVIDIA card
-# see https://github.com/flathub/org.yuzu_emu.yuzu/issues/1309
-if test -c /dev/nvidiactl; then
-    export QT_QPA_PLATFORM=xcb
-fi
-
 # Discord RPC
 for i in {0..9}; do
     test -S "$XDG_RUNTIME_DIR"/"discord-ipc-$i" || ln -sf {app/com.discordapp.Discord,"$XDG_RUNTIME_DIR"}/"discord-ipc-$i";
