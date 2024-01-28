@@ -239,6 +239,27 @@
             ]
         },
         {
+            "name": "gamemode",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dwith-sd-bus-provider=no-daemon",
+                "-Dwith-examples=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/FeralInteractive/gamemode/releases/download/1.8.1/gamemode-1.8.1.tar.xz",
+                    "sha256": "cdb117d05d65dbd03c0bd2104df874a1f878db8f23cc4d55bfa44e832482269e",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 17418,
+                        "stable-only": true,
+                        "url-template": "https://github.com/FeralInteractive/gamemode/releases/download/$version/gamemode-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
             "name": "yuzu",
             "buildsystem": "cmake-ninja",
             "builddir": true,
