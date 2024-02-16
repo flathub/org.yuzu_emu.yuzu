@@ -294,9 +294,10 @@
             ],
             "post-install": [
                 "install -Dm755 ../yuzu-launcher.sh /app/bin/yuzu-launcher",
-                "install -Dm644 ../org.yuzu_emu.yuzu.metainfo.xml /app/share/appdata/org.yuzu_emu.yuzu.metainfo.xml",
+                "install -Dm644 ../org.yuzu_emu.yuzu.metainfo.xml /app/share/metainfo/org.yuzu_emu.yuzu.metainfo.xml",
                 "install -Dm644 ../org.yuzu_emu.yuzu.svg /app/share/icons/hicolor/scalable/apps/org.yuzu_emu.yuzu.svg",
-                "desktop-file-edit --set-key StartupWMClass --set-value yuzu --set-key Exec --set-value yuzu-launcher /app/share/applications/org.yuzu_emu.yuzu.desktop"
+                "desktop-file-edit --set-key StartupWMClass --set-value yuzu --set-key Exec --set-value yuzu-launcher /app/share/applications/org.yuzu_emu.yuzu.desktop",
+                "rm -rf /app/share/appdata"
             ],
             "sources": [
                 {
