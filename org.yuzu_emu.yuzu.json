@@ -271,8 +271,8 @@
                 "-DENABLE_COMPATIBILITY_LIST_DOWNLOAD=OFF",
                 "-DYUZU_USE_QT_WEB_ENGINE=ON",
                 "-DYUZU_USE_BUNDLED_FFMPEG=ON",
-                "-DDISPLAY_VERSION=1714",
-                "-DBUILD_TAG=mainline-1714",
+                "-DDISPLAY_VERSION=1720",
+                "-DBUILD_TAG=mainline-1720",
                 "-DBUILD_REPOSITORY=yuzu-emu/yuzu-mainline"
             ],
             "build-options": {
@@ -301,16 +301,17 @@
             ],
             "post-install": [
                 "install -Dm755 ../yuzu-launcher.sh /app/bin/yuzu-launcher",
-                "install -Dm644 ../org.yuzu_emu.yuzu.metainfo.xml /app/share/appdata/org.yuzu_emu.yuzu.metainfo.xml",
+                "install -Dm644 ../org.yuzu_emu.yuzu.metainfo.xml /app/share/metainfo/org.yuzu_emu.yuzu.metainfo.xml",
                 "install -Dm644 ../org.yuzu_emu.yuzu.svg /app/share/icons/hicolor/scalable/apps/org.yuzu_emu.yuzu.svg",
-                "desktop-file-edit --set-key StartupWMClass --set-value yuzu --set-key Exec --set-value yuzu-launcher /app/share/applications/org.yuzu_emu.yuzu.desktop"
+                "desktop-file-edit --set-key StartupWMClass --set-value yuzu --set-key Exec --set-value yuzu-launcher /app/share/applications/org.yuzu_emu.yuzu.desktop",
+                "rm -rf /app/share/appdata"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/yuzu-emu/yuzu-mainline.git",
-                    "tag": "mainline-0-1714",
-                    "commit": "bd7480b6676245347bb86c1e2b8337abc2271139",
+                    "tag": "mainline-0-1720",
+                    "commit": "c19bb0c29a8e0cfc7a8ae564d3f9a92fe1bcf156",
                     "disable-shallow-clone": true,
                     "x-checker-data": {
                         "type": "git",
