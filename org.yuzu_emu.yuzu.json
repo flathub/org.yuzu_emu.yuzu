@@ -285,6 +285,13 @@
                         "config-opts": [
                             "-DENABLE_OPENGL=OFF"
                         ]
+                    },
+                    "x86_64": {
+                        "config-opts": [
+                          "-DYUZU_ENABLE_LTO=ON",
+                          "-DCMAKE_C_FLAGS=$CFLAGS -lxml2 -march=x86-64-v3 -mtune=generic -Ofast",
+                          "-DCMAKE_CXX_FLAGS=$CXXFLAGS -lxml2 -march=x86-64-v3 -mtune=generic -Ofast"
+                        ]
                     }
                 }
             },
